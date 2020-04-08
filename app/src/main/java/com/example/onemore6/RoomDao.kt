@@ -4,7 +4,7 @@ import androidx.room.*
 
 @Dao
 interface studentDao{
-    @Query("SELECT * FROM studentTbl")
+    @Query("SELECT * FROM Student")
     fun allStudents():List<Student>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -12,4 +12,7 @@ interface studentDao{
 
     @Update
     fun update(student:Student)
+
+    @Delete
+    fun delete(student:Student)
 }

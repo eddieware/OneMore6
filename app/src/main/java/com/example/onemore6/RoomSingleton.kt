@@ -5,9 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = arrayOf(Student::class), version = 1)
+@Database(entities = [(Student::class)], version = 1)
 abstract class RoomSingleton : RoomDatabase() {
-    abstract fun studentDao():studentDao
+    abstract fun studentDao():studentDao/*
 
     companion object {
         private var INSTANCE: RoomSingleton? = null
@@ -21,5 +21,5 @@ abstract class RoomSingleton : RoomDatabase() {
             }
             return INSTANCE as RoomSingleton
         }
-    }
+    }*/
 }
